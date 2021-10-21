@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferences</title>
+</head>
+<body>
+    <h1>Postings for Conferences</h1>
+    <div class="container">
+        {% if results %}
+            <h2>Posts</h2>
+            <ul>
+                {% for result in results %}
+                <li><a href="{{ result['link'] }}">{{ result['target'] }}</a> {{ result['title'] }} {{ result['date'] }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
